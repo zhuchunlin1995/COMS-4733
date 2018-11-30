@@ -1,0 +1,14 @@
+1. Usage:
+a) First, after starting roscore, run roslaunch vgraph launch.launch.
+b) Then run python vgraph.py which includes everyting you need to make the robot move to the goal points.
+
+2. Method:
+Frist, We import the create_map.py file to get the all the coodinations of obstacles.
+Then, the expand_obstacles method will first expand every obstacles based on the reflection algorithm and then find the convex hall of them. It will record all the expanded obstacles' coordinators. Then we use get_all_routes method to find out all the possible route form starting point to the end pointing by calculating all the combinations of point first and then removing the blocked route by obstacles. The next step is to use dijkstra to calculate the shortest path. Finally we use the rotate and translate method developed in the first lab to move the robot.
+
+3. video:
+grow obstacles, find all the routes, and find the shortest path
+https://www.youtube.com/watch?v=PnUCMkgje8M
+
+move robot
+https://www.youtube.com/watch?v=KDufv3Xzvu8
